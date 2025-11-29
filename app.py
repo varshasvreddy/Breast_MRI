@@ -4,11 +4,7 @@ import torch.nn.functional as F
 from torchvision import transforms
 from PIL import Image
 import numpy as np
-import cv2
-from pytorch_grad_cam import GradCAM
-from pytorch_grad_cam.utils.image import show_cam_on_image
-from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
-from models.hybrid_model import HybridModel
+from hybrid_model import HybridModel 
 
 # --------------------- App Header ---------------------
 st.set_page_config(page_title="Breast MRI Detection", layout="centered")
