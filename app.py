@@ -14,7 +14,7 @@ st.write("Upload a Breast MRI image to detect **Benign (Normal)** or **Malignant
 # --------------------- Model Loading ---------------------
 @st.cache_resource
 def load_model():
-    model_path = "models/breast_mri_model.pth"
+    model_path = "breast_mri_model.pth"
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = HybridModel(num_classes=2)
     model.load_state_dict(torch.load(model_path, map_location=device))
